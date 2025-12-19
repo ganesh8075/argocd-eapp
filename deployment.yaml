@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-deployment
+  name: eccom-deployment
 spec:
   replicas: 7
   selector:
     matchLabels:
-      app: spring
+      app: eccom
   template:
     metadata:
       labels:
-        app: spring
+        app: eccom
     spec:
       containers:
-      - name: petclinic
+      - name: eccom
         image: 636706114596.dkr.ecr.ap-south-1.amazonaws.com/ecomm-repo:latest
         ports:
         - containerPort: 8080
