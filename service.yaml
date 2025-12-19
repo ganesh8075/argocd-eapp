@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-service
+  name: eccom-service
   labels:
-    app: spring          # REQUIRED: matched by ServiceMonitor
+    app: eccom          
 spec:
   type: LoadBalancer
   selector:
-    app: spring          # MUST match Pod labels
+    app: eccom         
   ports:
-  - name: http           # REQUIRED: referenced by ServiceMonitor
+  - name: http           
     port: 80
     targetPort: 8080
